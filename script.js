@@ -56,3 +56,56 @@ function handleScroll() {
 
 // Listen for scroll events
 window.addEventListener('scroll', handleScroll);
+
+
+// gallery slider
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+  if (index < 0) {
+    slideIndex = totalSlides - 1;
+  } else if (index >= totalSlides) {
+    slideIndex = 0;
+  } else {
+    slideIndex = index;
+  }
+
+  const offset = -slideIndex * 100;
+  document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+
+  // Update dot indicator
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach((dot, idx) => {
+    if (idx === slideIndex) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
+    }
+  });
+}
+
+function moveSlide(n) {
+  showSlide(slideIndex + n);
+}
+
+function autoSlide() {
+  moveSlide(1);
+}
+
+// Auto slide every 3 seconds
+setInterval(autoSlide, 5000);
+
+// Create dots
+const dotContainer = document.querySelector('.slide-dots');
+slides.forEach((_, idx) => {
+  const dot = document.createElement('span');
+  dot.classList.add('dot');
+  dot.addEventListener('click', () => {
+    showSlide(idx);
+  });
+  dotContainer.appendChild(dot);
+});
+
+showSlide(slideIndex);

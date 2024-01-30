@@ -14,6 +14,9 @@
 
 <!-- feather icons -->
 <script src="https://unpkg.com/feather-icons"></script>
+
+<!-- AlpineJS -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <title>PurrVogue Apparel | Home</title>
 </head>
 <body>
@@ -27,14 +30,14 @@
         <li>
           <a href="#">Home</a>
           <a href="#">About</a>
-          <a href="#">Product</a>
-          <a href="#">Contacts</a>
+          <a href="#">Products</a>
+          <a href="#">Contact</a>
         </li>
       </ul>
     </div>
     <div class="navbar-extra">
       <a href="#"><i data-feather="search"></i></a>
-      <a href="#"><i data-feather="shopping-cart"></i></a>
+      <a href="#" class="shop"><i data-feather="shopping-cart"></i></a>
       <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
     </div>
   </nav>
@@ -60,10 +63,10 @@
   <!-- hero section end -->
   
   <!-- sale section start -->
+  <section class="sale">
   <div class="img">
     <img src="img/sale.png" alt="" />
   </div>
-  <section class="sale">
     <h2>CocoPet <span>Sale</span></h2>
   <h5>Promo Awal Tahun Pakaian Kucing Jadi Lebih Murah</h5>
   <p>Dapatkan potongan hinggal 50% dan gratis ongkir masa berlaku hinggal 1 bulan!. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati voluptatum ullam vitae laboriosam, deleniti culpa laborum itaque quisquam illum deserunt eius esse optio facere adipisci doloremque. Itaque cupiditate perferendis repellat quasi quae tempore hic reprehenderit, accusamus id iusto. Voluptatum natus magni iusto magnam itaque veniam eos totam. Ea, tenetur illum!</p>
@@ -125,7 +128,7 @@
   </section>
   <!-- reason section end -->
   
-  <!-- product section start -->
+  <!-- hot product section start -->
   <section class="product">
     <h1>Produk Terlaris</h1>
     <div class="hot-sales">
@@ -134,7 +137,9 @@
         <img src="img/1.png" alt="baju-lucu-gojek" />
         </div>
         <div class="hot-sales-content">
-        <p>Baju Kucing Lucu Gojek</p>
+        <p>BAJU KUCING LUCU GOJEK</p>
+        <p class="price">Rp. 20.500</p>
+        <p class="disc">Rp. 25.000</p>
         <a href="">Beli Sekarang</a>
         </div>
       </div>
@@ -143,13 +148,70 @@
         <img src="img/2.png" alt="baju-lucu-gojek" />
         </div>
         <div class="hot-sales-content">
-        <p>Baju Kucing Lucu Gojek</p>
+        <p>BAJU KUCING LUCU TAHANAN</p>
+        <p class="price">Rp. 20.500</p>
+        <p class="disc">Rp. 25.000</p>
         <a href="">Beli Sekarang</a>
         </div>
       </div>
     </div>
+    <a href="" class="more-button">Lihat Lebih banyak</a>
   </section>
   <!-- product section end -->
+  
+  <!-- gallery section start -->
+  <section class="gallery">
+    <h1>Gallery</h1>
+    <div class="slider">
+      <img src="img/gallery-1.jpg" class="slide" alt="Slide 1">
+      <img src="img/gallery-2.jpg" class="slide" alt="Slide 2">
+      <img src="img/gallery-3.jpg" class="slide" alt="Slide 3">
+      <img src="img/gallery-4.jpg" class="slide" alt="Slide 4">
+      <img src="img/gallery-5.jpg" class="slide" alt="Slide 5">
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    <div class="slide-dots"></div>
+  </section>
+  <!-- gallery section end -->
+  
+  <!-- footer section start -->
+  <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aut, deserunt illum aspernatur nesciunt ea molestiae?</p>
+                <div class="contact">
+                    <a href="tel:+6281553537904">+62 815 5353 7904</a>
+                    <a href="mailto:cocopetcare@gmail.com">cocopetcare@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 nauval. All rights reserved.
+    </div>
+</footer>
+
+  <!-- footer section end -->
   
   
   <!-- feather icons -->
